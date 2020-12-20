@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.kelin.banner.view.BannerView
+        android:id="@+id/vp_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:singlePageMode="canNotPaging|noIndicator"
+        app:titleView="@id/tv_title"
+        app:pagingIntervalTime="3000"
+        app:decelerateMultiple="4"
+        android:background="#FFF"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--   显示标题控件     -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="我是标题！"/>
+        <!--   Banner的圆点型指示器     -->
+        <com.kelin.banner.view.PointIndicatorView
+            android:id="@+id/biv_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:pointRadius="3dp"
+            app:selectedPointRadius="4dp"
+            app:pointSpacing="4dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
